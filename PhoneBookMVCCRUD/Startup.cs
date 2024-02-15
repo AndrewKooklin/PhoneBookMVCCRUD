@@ -1,21 +1,38 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using PhoneBookMVCCRUD.Domain.Repositories.Abstract;
+using PhoneBookMVCCRUD.Domain.Repositories.EF;
+using PhoneBookMVCCRUD.Domain;
 
 namespace PhoneBookMVCCRUD
 {
     public class Startup
     {
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+        public IConfiguration Configuration { get; }
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
         public void ConfigureServices(IServiceCollection services)
         {
+            //подключаем Config из appsettings.json для получения connectionString
+            Configuration.Bind("PhoneBook", new Config());
+
+            //подключаем сервисы
+            services.AddTransient<IPhoneBookRecordsRepository, EFPhoneBookRecordsRepository>();
+            services.AddTransient<DataManager>();
+
+            //подключаем контекст БД
+            services.AddDbContext<AppDBContext>(x => x.UseSqlServer(Config.ConnectionString));
+
+            //поддержка контроллеров и представлений
+            services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -26,14 +43,16 @@ namespace PhoneBookMVCCRUD
                 app.UseDeveloperExceptionPage();
             }
 
+            //подключаем поддержку статичных файлов
+            app.UseStaticFiles();
+
+            //подключаем систему маршрутизации
             app.UseRouting();
 
+            //регистрируем маршруты(endpoints)
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
+                endpoints.MapControllerRoute(name: "default", "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

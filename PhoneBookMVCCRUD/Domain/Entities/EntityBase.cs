@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PhoneBookMVC.Domain.Entities
+namespace PhoneBookMVCCRUD.Domain.Entities
 {
     public class EntityBase
     {

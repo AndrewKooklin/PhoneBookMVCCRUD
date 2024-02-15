@@ -1,11 +1,11 @@
-﻿using PhoneBookMVC.Domain.Entities;
-using PhoneBookMVC.Domain.Repositories.Abstract;
+﻿using PhoneBookMVCCRUD.Domain.Entities;
+using PhoneBookMVCCRUD.Domain.Repositories.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PhoneBookMVC.Domain.Repositories.EF
+namespace PhoneBookMVCCRUD.Domain.Repositories.EF
 {
     public class EFPhoneBookRecordsRepository : IPhoneBookRecordsRepository
     {

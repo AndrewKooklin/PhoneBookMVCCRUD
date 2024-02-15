@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace PhoneBookMVC.Controllers
+namespace PhoneBookMVCCRUD.Controllers
 {
     public class NotFoundController : Controller
     {

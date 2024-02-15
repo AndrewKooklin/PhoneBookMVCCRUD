@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using PhoneBookMVC.Domain.Entities;
+using PhoneBookMVCCRUD.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PhoneBookMVC.Domain
+namespace PhoneBookMVCCRUD.Domain
 {
     public class AppDBContext : IdentityDbContext
     {

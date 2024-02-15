@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PhoneBookMVC.Domain
+namespace PhoneBookMVCCRUD.Domain
 {
     public class Config
     {

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using PhoneBookMVC.Domain;
-using PhoneBookMVC.Domain.Entities;
+using PhoneBookMVCCRUD.Domain;
+using PhoneBookMVCCRUD.Domain.Entities;
 
-namespace PhoneBookMVC.Controllers
+namespace PhoneBookMVCCRUD.Controllers
 {
     public class DetailsController : Controller
     {
