@@ -126,8 +126,6 @@ C:\repos\PhoneBookMVCCRUD\PhoneBookMVCCRUD\bin\Debug\netcoreapp3.1\ru\Microsoft.
 C:\repos\PhoneBookMVCCRUD\PhoneBookMVCCRUD\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\repos\PhoneBookMVCCRUD\PhoneBookMVCCRUD\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\repos\PhoneBookMVCCRUD\PhoneBookMVCCRUD\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\repos\PhoneBookMVCCRUD\PhoneBookMVCCRUD\obj\Debug\netcoreapp3.1\PhoneBookMVCCRUD.csproj.CoreCompileInputs.cache
-C:\repos\PhoneBookMVCCRUD\PhoneBookMVCCRUD\obj\Debug\netcoreapp3.1\PhoneBookMVCCRUD.MvcApplicationPartsAssemblyInfo.cache
 C:\repos\PhoneBookMVCCRUD\PhoneBookMVCCRUD\obj\Debug\netcoreapp3.1\PhoneBookMVCCRUD.RazorAssemblyInfo.cache
 C:\repos\PhoneBookMVCCRUD\PhoneBookMVCCRUD\obj\Debug\netcoreapp3.1\PhoneBookMVCCRUD.RazorAssemblyInfo.cs
 C:\repos\PhoneBookMVCCRUD\PhoneBookMVCCRUD\obj\Debug\netcoreapp3.1\PhoneBookMVCCRUD.TagHelpers.input.cache
@@ -144,3 +142,7 @@ C:\repos\PhoneBookMVCCRUD\PhoneBookMVCCRUD\obj\Debug\netcoreapp3.1\PhoneBookMVCC
 C:\repos\PhoneBookMVCCRUD\PhoneBookMVCCRUD\obj\Debug\netcoreapp3.1\PhoneBookMVCCRUD.dll
 C:\repos\PhoneBookMVCCRUD\PhoneBookMVCCRUD\obj\Debug\netcoreapp3.1\PhoneBookMVCCRUD.pdb
 C:\repos\PhoneBookMVCCRUD\PhoneBookMVCCRUD\obj\Debug\netcoreapp3.1\PhoneBookMVCCRUD.genruntimeconfig.cache
+C:\repos\PhoneBookMVCCRUD\PhoneBookMVCCRUD\obj\Debug\netcoreapp3.1\Razor\Views\CreateRecord\Create.cshtml.g.cs
+C:\repos\PhoneBookMVCCRUD\PhoneBookMVCCRUD\obj\Debug\netcoreapp3.1\Razor\Views\EditRecord\Edit.cshtml.g.cs
+C:\repos\PhoneBookMVCCRUD\PhoneBookMVCCRUD\obj\Debug\netcoreapp3.1\PhoneBookMVCCRUD.csproj.CoreCompileInputs.cache
+C:\repos\PhoneBookMVCCRUD\PhoneBookMVCCRUD\obj\Debug\netcoreapp3.1\PhoneBookMVCCRUD.MvcApplicationPartsAssemblyInfo.cache

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PhoneBookMVCCRUD.Domain.Repositories.EF
 {
-    public class EFPhoneBookRecordsRepository : IPhoneBookRecordsRepository
+    public class EFPhoneBookRecordsRepository : IPhoneBookRecordRepository
     {
         private readonly AppDBContext _context;
 
@@ -21,20 +21,32 @@ namespace PhoneBookMVCCRUD.Domain.Repositories.EF
             return _context.PhoneBookRecords;
         }
 
-        //public async Task<IQueryable<PhoneBookRecord>> GetPhoneBookRecordsAsync()
-        //{
-        //    List<PhoneBookRecord> bookRecords = new List<PhoneBookRecord>();
-        //    await foreach(var item in _context.PhoneBookRecords)
-        //    {
-        //        bookRecords.Add(item);
-        //    }
-            
-        //    return  bookRecords.AsQueryable<PhoneBookRecord>();
-        //}
-
         public PhoneBookRecord GetPhoneBookRecordById(int id)
         {
             return _context.PhoneBookRecords.FirstOrDefault(r => r.Id == id);
+        }
+
+        public void SavePhoneBookRecord(PhoneBookRecord phoneBookRecord)
+        {
+            if (phoneBookRecord.Id == default)
+            {
+                _context.Entry(phoneBookRecord).State = Microsoft.EntityFrameworkCore.EntityState.Added;
+                _context.PhoneBookRecords.Add(phoneBookRecord);
+            }
+            _context.SaveChanges();
+        }
+
+        public void DeletePhoneBookRecord(int id)
+        {
+            _context.PhoneBookRecords.Remove(new PhoneBookRecord{Id = id });
+            _context.SaveChanges();
+        }
+
+        public void EditPhoneBookRecord(PhoneBookRecord phoneBookRecord)
+        {
+            _context.Entry(phoneBookRecord).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+
+            _context.SaveChanges();
         }
     }
 }

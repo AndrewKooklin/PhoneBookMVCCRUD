@@ -27,19 +27,7 @@ namespace PhoneBookMVCCRUD.Domain.Entities
         [Display(Name = "Адрес")]
         public virtual string Address { get; set; }
 
-        private string description;
-
         [Display(Name = "Описание")]
-        public virtual string Description 
-        {
-            get 
-            { 
-                return description = $"{Id} {LastName} {FirstName} {FathersName}";
-            }
-            set
-            {
-                description = value;
-            }
-        } 
+        public virtual string Description { get; set; }
     }
 }

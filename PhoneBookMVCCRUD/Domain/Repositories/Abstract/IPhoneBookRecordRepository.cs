@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace PhoneBookMVCCRUD.Domain.Repositories.Abstract
 {
-    public interface IPhoneBookRecordsRepository
+    public interface IPhoneBookRecordRepository
     {
         IQueryable<PhoneBookRecord> GetPhoneBookRecords();
 
-        //Task<IQueryable<PhoneBookRecord>> GetPhoneBookRecordsAsync();
         PhoneBookRecord GetPhoneBookRecordById(int id);
+
+        void SavePhoneBookRecord(PhoneBookRecord phoneBookRecord);
+
+        void EditPhoneBookRecord(PhoneBookRecord phoneBookRecord);
+
+        void DeletePhoneBookRecord(int id);
     }
 }

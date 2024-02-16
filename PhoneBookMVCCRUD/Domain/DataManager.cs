@@ -8,9 +8,9 @@ namespace PhoneBookMVCCRUD.Domain
 {
     public class DataManager
     {
-        public IPhoneBookRecordsRepository PhoneBookRecords { get; set; }
+        public IPhoneBookRecordRepository PhoneBookRecords { get; set; }
 
-        public DataManager(IPhoneBookRecordsRepository phoneBookRecords)
+        public DataManager(IPhoneBookRecordRepository phoneBookRecords)
         {
             PhoneBookRecords = phoneBookRecords;
         }

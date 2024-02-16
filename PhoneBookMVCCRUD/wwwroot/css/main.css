@@ -1,4 +1,4 @@
-@import url("fontawesome-all.min.css");
+H@import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Oleo+Script:400|Open+Sans:300,300italic,600,600italic,800");
 
 /*
@@ -1519,7 +1519,7 @@ input, select, textarea {
 		display: block;
 		width: 100%;
 		border-radius: 8px;
-		border: solid 1px #eee;
+		border: solid 1px #686868;
 	}
 
 		form input[type="text"]:focus,
@@ -1661,7 +1661,14 @@ input, select, textarea {
 		border: 0;
 		cursor: pointer;
 		font-size: 1.35em;
-		padding: 0.6em 1.5em;
+		padding: 0.3em 0.5em;
+	}
+
+	.create{
+		width:auto;
+		height:auto;
+		margin: 15px 15px 15px 0px;
+		padding: 10px;
 	}
 
 		input[type="button"].icon:before,
@@ -1926,7 +1933,7 @@ input, select, textarea {
 /* Wrappers */
 
 	#header-wrapper {
-		padding: 4.5em 0 3em 0;
+		padding: 4.5em 0 2em 0;
 	}
 
 	#features-wrapper {
@@ -1936,7 +1943,7 @@ input, select, textarea {
 	#main-wrapper {
 		background: #fff;
 		box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, 0.05);
-		padding: 5em 0 5em 0;
+		padding: 1em 0 5em 0;
 	}
 
 	#footer-wrapper {
@@ -2644,7 +2651,7 @@ input, select, textarea {
 			}
 
 			#main-wrapper, #footer-wrapper {
-				padding: 40px 30px 40px 30px;
+				padding: 20px 30px 40px 30px;
 			}
 
 		/* Logo */
@@ -2703,5 +2710,9 @@ input, select, textarea {
 				text-align: left;
 			}
 
+	}
+
+	.text-validation{
+		color:red;
 	}
 

@@ -25,7 +25,7 @@ namespace PhoneBookMVCCRUD
             Configuration.Bind("PhoneBook", new Config());
 
             //подключаем сервисы
-            services.AddTransient<IPhoneBookRecordsRepository, EFPhoneBookRecordsRepository>();
+            services.AddTransient<IPhoneBookRecordRepository, EFPhoneBookRecordsRepository>();
             services.AddTransient<DataManager>();
 
             //подключаем контекст БД

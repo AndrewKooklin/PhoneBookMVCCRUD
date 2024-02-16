@@ -26,5 +26,7 @@
     </tbody>
 </table>
 <div>
-    <a asp-controller="Home" asp-action="Index" class="button">Home</a>
+    <a asp-controller="Home" asp-action="Index" class="button" >Home</a>
+    <a asp-controller="EditRecord" asp-action="Edit" asp-route-id="@Model.Id" class="button ">Редактировать</a>
+    <a asp-controller="DeleteRecord" asp-action="Index" asp-route-id="@Model.Id" class="button">Удалить</a>
 </div>
