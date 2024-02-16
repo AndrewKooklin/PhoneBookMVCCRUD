@@ -16,6 +16,10 @@ namespace PhoneBookMVCCRUD.Controllers
             _dataManager = dataManager;
         }
 
+        [HttpDelete]
+        [HttpPatch]
+        [HttpPost]
+        [HttpGet]
         public IActionResult Index(int id)
         {
             _dataManager.PhoneBookRecords.DeletePhoneBookRecord(id);

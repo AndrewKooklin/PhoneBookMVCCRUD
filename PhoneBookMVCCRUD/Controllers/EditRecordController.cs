@@ -17,13 +17,16 @@ namespace PhoneBookMVCCRUD.Controllers
             _dataManager = dataManager;
         }
 
+        [HttpGet]
         public IActionResult Edit(int id)
         {
             PhoneBookRecord phoneBookRecord = _dataManager.PhoneBookRecords.GetPhoneBookRecordById(id);
             return View(phoneBookRecord);
         }
 
+        [HttpPut]
         [HttpPost]
+        [HttpDelete]
         public IActionResult Edit(PhoneBookRecord model)
         {
             if (ModelState.IsValid)

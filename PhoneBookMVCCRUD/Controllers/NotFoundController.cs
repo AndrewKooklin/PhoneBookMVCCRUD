@@ -8,6 +8,7 @@ namespace PhoneBookMVCCRUD.Controllers
 {
     public class NotFoundController : Controller
     {
+        [HttpGet]
         public IActionResult NoData()
         {
             return View();

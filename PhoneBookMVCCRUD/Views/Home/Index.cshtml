@@ -30,11 +30,10 @@
                 <td>@item.FirstName</td>
                 <td>@item.FathersName</td>
                 <td>
-                    <a asp-controller="DeleteRecord"
+                    <button asp-controller="DeleteRecord"
                        asp-action="Index"
                        asp-route-id="@item.Id"
-                       title="Удалить"
-                       class="linkDetails">Удалить</a>
+                       title="Удалить">Удалить</button>
                 </td>
             </tr>
                 }

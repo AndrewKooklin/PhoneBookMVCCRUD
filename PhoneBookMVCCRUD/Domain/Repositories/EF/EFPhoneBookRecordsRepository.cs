@@ -45,7 +45,7 @@ namespace PhoneBookMVCCRUD.Domain.Repositories.EF
         public void EditPhoneBookRecord(PhoneBookRecord phoneBookRecord)
         {
             _context.Entry(phoneBookRecord).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-
+           // _context.PhoneBookRecords.Update(phoneBookRecord);
             _context.SaveChanges();
         }
     }

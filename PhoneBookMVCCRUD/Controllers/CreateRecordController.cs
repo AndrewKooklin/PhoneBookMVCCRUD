@@ -17,6 +17,7 @@ namespace PhoneBookMVCCRUD.Controllers
             _dataManager = dataManager;
         }
 
+        [HttpGet]
         public IActionResult Create()
         {
             return View();

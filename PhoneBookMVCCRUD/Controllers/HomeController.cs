@@ -20,6 +20,7 @@ namespace PhoneBookMVCCRUD.Controllers
             _dataManager = dataManager;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
             if(_dataManager == null)
